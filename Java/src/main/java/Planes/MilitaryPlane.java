@@ -28,4 +28,9 @@ public class MilitaryPlane extends Plane{
 
     @Override
     public int hashCode() { return Objects.hash(super.hashCode(), militaryType); }
+
+         @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
 }

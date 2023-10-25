@@ -23,9 +23,9 @@ public class ExperimentalPlane extends Plane{
         this.classificationLevel = classificationLevel;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
+   @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), experimentalType, classificationLevel);
     }
 
     @Override
@@ -36,4 +36,10 @@ public class ExperimentalPlane extends Plane{
                 ", maxLoadCapacity=" + this.getMaxLoadCapacity() +
                 '}';
     }
+
+       @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
 }
